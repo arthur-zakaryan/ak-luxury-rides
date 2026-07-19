@@ -40,7 +40,7 @@ contactForm.addEventListener('submit', async (e) => {
     });
     const data = await res.json();
 
-    if (res.ok && data.success !== false) {
+    if (res.ok && data.success === 'true') {
       formStatus.textContent = 'Request sent — we’ll confirm your reservation shortly.';
       formStatus.classList.add('is-success');
       contactForm.reset();
