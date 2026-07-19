@@ -33,14 +33,14 @@ contactForm.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Sending…';
 
   try {
-    const res = await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch('https://formsubmit.co/ajax/reservations@akluxuryrides.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
     });
     const data = await res.json();
 
-    if (data.success) {
+    if (res.ok && data.success !== false) {
       formStatus.textContent = 'Request sent — we’ll confirm your reservation shortly.';
       formStatus.classList.add('is-success');
       contactForm.reset();
