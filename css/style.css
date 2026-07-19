@@ -42,11 +42,8 @@
   nav ul{list-style:none; display:flex; gap:38px;}
   nav a{font-size:18px; letter-spacing:1.5px; color:var(--ivory-dim); transition:color .25s ease;}
   nav a:hover{color:var(--gold);}
-  .nav-cta{
-    border:1px solid var(--gold-soft); color:var(--gold); font-size:11px; letter-spacing:2px;
-    padding:9px 20px; transition:all .25s ease;
-  }
-  .nav-cta:hover{background:var(--gold); color:var(--black); border-color:var(--gold);}
+  .nav-cta{font-size:18px; letter-spacing:1.5px; color:var(--ivory-dim); transition:color .25s ease;}
+  .nav-cta:hover{color:var(--gold);}
 
   .nav-toggle{
     display:none; flex-direction:column; justify-content:center; gap:5px;
