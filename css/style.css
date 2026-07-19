@@ -189,22 +189,28 @@
   /* CONTACT */
   .contact{text-align:center;}
   .contact-form{max-width:520px; margin:0 auto; display:flex; flex-direction:column; gap:16px;}
-  .contact-form input, .contact-form select{
+  .contact-form input, .contact-form select, .contact-form textarea{
     background:transparent; border:none; border-bottom:1px solid var(--panel-line);
     color:var(--ivory); padding:14px 4px; font-family:'Jost',sans-serif; font-size:14px; font-weight:300;
     outline:none; transition:border-color .25s ease;
   }
-  .contact-form input::placeholder{color:var(--ivory-dim);}
-  .contact-form input:focus, .contact-form select:focus{border-color:var(--gold);}
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--ivory-dim);}
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{border-color:var(--gold);}
   .contact-form select{color:var(--ivory-dim);}
+  .contact-form textarea{resize:vertical; min-height:90px; font-family:'Jost',sans-serif;}
   .contact-form button{margin-top:14px;}
+  .contact-form button:disabled{opacity:.6; cursor:default;}
+  .hp-field{position:absolute; opacity:0; height:0; width:0; pointer-events:none;}
+  .form-status{margin-top:10px; font-size:13px; letter-spacing:.5px; min-height:1.2em;}
+  .form-status.is-success{color:var(--gold);}
+  .form-status.is-error{color:#c96b4b;}
   .contact-form input[type="datetime-local"]{color-scheme:dark;}
   .contact-form input[type="datetime-local"]::-webkit-calendar-picker-indicator{
     filter:invert(70%) sepia(31%) saturate(485%) hue-rotate(358deg) brightness(92%) contrast(89%);
     cursor:pointer;
   }
   @media (max-width:600px){
-    .contact-form input, .contact-form select{font-size:16px;}
+    .contact-form input, .contact-form select, .contact-form textarea{font-size:16px;}
   }
 
   /* FOOTER */
